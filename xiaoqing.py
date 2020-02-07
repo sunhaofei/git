@@ -14,7 +14,7 @@ filename = '/Users/sunhaofei/Downloads/data_hxh.xlsx'
 
 df = pd.read_excel(filename)
 
-# 设置天气情况的判别条件, 云量低于5成算晴天（1），云量大于5算阴天（0）；有雨有雪算雨天（2）
+## 设置天气情况的判别条件, 云量低于5成算晴天（1），云量大于5算阴天（0）；有雨有雪算雨天（2）
 
 df["conditions"] = [0 if cloud > 5 else 1 for cloud in df["clouds"].apply(float)]
 row_list = []
